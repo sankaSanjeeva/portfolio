@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,11 @@
     <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" />
     <style type="text/tailwindcss">
       @layer base {
+        html {
+          color-scheme: dark;
+          scroll-behavior: smooth;
+        }
+
         body {
           font-family: "Sofia Pro", sans-serif;
         }
@@ -16,6 +21,34 @@
       @layer utilities {
         .nav-li {
           @apply transition-colors hover:text-slate-200;
+        }
+
+        section {
+          @apply mb-16 md:mb-24 lg:mb-36 scroll-mt-16 lg:scroll-mt-24;
+        }
+
+        .section-title {
+          @apply sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden text-sm font-bold uppercase tracking-widest text-slate-200;
+        }
+
+        .card {
+          @apply relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50;
+        }
+
+        .card-header {
+          @apply z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2;
+        }
+
+        .card-title {
+          @apply items-baseline font-medium leading-tight transition-colors text-slate-200 hover:text-teal-300;
+        }
+
+        .card-overlay {
+          @apply absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover/card:bg-slate-800/50 lg:group-hover/card:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover/card:drop-shadow-lg;
+        }
+
+        .tag {
+          @apply flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300;
         }
       }
     </style>
@@ -40,7 +73,7 @@
             I'm passionate about creating great user experiences and have a
             strong understanding of usability and accessibility standards
           </p>
-          <nav class="mt-16">
+          <nav class="mt-16 hidden lg:block">
             <ul
               class="flex flex-col gap-5 uppercase text-xs font-bold tracking-widest text-slate-500"
             >
@@ -59,7 +92,7 @@
             </ul>
           </nav>
         </div>
-        <ul class="flex gap-5">
+        <ul class="mt-8 flex gap-5">
           <li>
             <a
               href="https://github.com/sankaSanjeeva"
@@ -153,7 +186,121 @@
         </ul>
       </header>
 
-      <main class="pt-24 lg:py-24 lg:flex-1"></main>
+      <main class="pt-24 lg:py-24 lg:flex-1">
+        <section id="about">
+          <p class="mb-4">
+            Results-driven software engineer with expertise in React, React
+            Native, Angular, TypeScript, and front-end technologies. Proven
+            track record of delivering high-quality solutions and collaborating
+            effectively in cross-functional teams.
+          </p>
+          <p class="mb-4">
+            My goal is to become a skilled front-end developer and use my
+            knowledge to teach others.
+          </p>
+          <p class="mb-4">
+            When I'm not at the computer, I'm usually hiking, swimming, playing
+            video games online, or spending time with friends
+          </p>
+        </section>
+
+        <section id="experience">
+          <h2 class="section-title">Experience</h2>
+
+          <ol class="group/list">
+            <li class="mb-12">
+              <div class="card group/card">
+                <div class="card-overlay"></div>
+                <header class="card-header">Jan 2022 — Present</header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-slate-200">
+                    <a
+                      href="https://fidenz.com/"
+                      target="_blank"
+                      class="card-title"
+                      >Fidenz Technologies</a
+                    >
+                    <div class="text-slate-500">Software Engineer</div>
+                  </h3>
+                  <p class="mt-2 text-sm leading-normal">
+                    Contributed to various projects as both a front-end and
+                    back-end developer. Created a React boilerplate for future
+                    use and developed React assignments for trainees.
+                  </p>
+                  <ul class="mt-2 flex flex-wrap gap-1.5">
+                    <li class="tag">React</li>
+                    <li class="tag">Angular</li>
+                    <li class="tag">NestJS</li>
+                    <li class="tag">Laravel</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">GraphQL</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="mb-12">
+              <div class="card group/card">
+                <div class="card-overlay"></div>
+                <header class="card-header">Jul 2021 — Jan 2022</header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-slate-200">
+                    <a
+                      href="https://fidenz.com/"
+                      target="_blank"
+                      class="card-title"
+                      >Fidenz Technologies</a
+                    >
+                    <div class="text-slate-500">Associate Senior Engineer</div>
+                  </h3>
+                  <p class="mt-2 text-sm leading-normal">
+                    Developed a mobile shopping guide app that features
+                    sustainable palm oil. Designed and developed various types
+                    of systems such as content management systems, and worked
+                    with external organizations as a React developer.
+                  </p>
+                  <ul class="mt-2 flex flex-wrap gap-1.5">
+                    <li class="tag">React</li>
+                    <li class="tag">React Native</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">GraphQL</li>
+                    <li class="tag">Tailwindcss</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="mb-12">
+              <div class="card group/card">
+                <div class="card-overlay"></div>
+                <header class="card-header">Jul 2021 — Jan 2022</header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-slate-200">
+                    <a
+                      href="https://dspcontrols.lk/"
+                      target="_blank"
+                      class="card-title"
+                      >DSP Controls</a
+                    >
+                    <div class="text-slate-500">Associate Senior Engineer</div>
+                  </h3>
+                  <p class="mt-2 text-sm leading-normal">
+                    Collaborated with the UI team to develop and enhance major
+                    features of various utility management systems.
+                  </p>
+                  <ul class="mt-2 flex flex-wrap gap-1.5">
+                    <li class="tag">Angular</li>
+                    <li class="tag">Angular Material</li>
+                    <li class="tag">Bootstrap</li>
+                    <li class="tag">RESTful API</li>
+                    <li class="tag">Git</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </main>
     </div>
   </body>
 </html>
