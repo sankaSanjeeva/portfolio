@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="cursor.js"></script>
     <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" />
     <style type="text/tailwindcss">
       @layer base {
@@ -54,8 +55,12 @@
     </style>
   </head>
   <body
-    class="bg-slate-900 text-slate-400 selection:bg-teal-300 selection:text-teal-900"
+    class="relative bg-slate-900 text-slate-400 selection:bg-teal-300 selection:text-teal-900"
   >
+    <div
+      class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+      id="cursor"
+    ></div>
     <div
       class="mx-auto max-w-screen-xl min-h-screen px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 lg:flex justify-between gap-4"
     >
@@ -287,7 +292,7 @@
                     </li>
                     <li>
                       <a
-                        href="https://play.google.com/store/apps/details?id=com.venturedna.palmoil&hl=en&gl=US"
+                        href="https://apps.apple.com/us/app/palmoil-scan/id671945416"
                         class="inline-flex items-center text-sm text-slate-300 hover:text-teal-300"
                       >
                         <svg
@@ -360,6 +365,7 @@
                   </p>
                   <ul class="mt-4 flex flex-wrap gap-1.5">
                     <li class="tag">HTML</li>
+                    <li class="tag">JavaScript</li>
                     <li class="tag">Tailwindcss</li>
                   </ul>
                 </div>
