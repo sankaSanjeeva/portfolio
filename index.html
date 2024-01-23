@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="cursor.js"></script>
+    <script src="observer.js"></script>
     <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" />
     <style type="text/tailwindcss">
       @layer base {
@@ -83,16 +84,16 @@
               class="flex flex-col gap-5 uppercase text-xs font-bold tracking-widest text-slate-500"
             >
               <li>
-                <a href="#about" class="nav-li">about</a>
+                <a href="#about" class="nav-li about">about</a>
               </li>
               <li>
-                <a href="#experience" class="nav-li">experience</a>
+                <a href="#experience" class="nav-li experience">experience</a>
               </li>
               <li>
-                <a href="#projects" class="nav-li">projects</a>
+                <a href="#projects" class="nav-li projects">projects</a>
               </li>
               <li>
-                <a href="#education" class="nav-li">education</a>
+                <a href="#education" class="nav-li education">education</a>
               </li>
             </ul>
           </nav>
@@ -193,6 +194,8 @@
 
       <main class="pt-24 lg:py-24 lg:flex-1">
         <section id="about">
+          <h2 class="section-title">About</h2>
+
           <p class="mb-4">
             Results-driven software engineer with expertise in React, React
             Native, Angular, TypeScript, and front-end technologies. Proven
