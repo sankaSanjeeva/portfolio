@@ -30,7 +30,7 @@
         }
 
         .section-title {
-          @apply sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden text-sm font-bold uppercase tracking-widest text-slate-200;
+          @apply sticky top-[-1px] z-20 -mx-6 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden text-sm font-bold uppercase tracking-widest text-slate-200;
         }
 
         .card {
@@ -42,7 +42,7 @@
         }
 
         .card-title {
-          @apply items-baseline font-medium leading-tight transition-colors text-slate-200 hover:text-teal-300;
+          @apply font-medium leading-tight transition-colors text-slate-200 hover:text-teal-300;
         }
 
         .card-overlay {
@@ -208,7 +208,7 @@
           </p>
           <p class="mb-4">
             When I'm not at the computer, I'm usually hiking, swimming, playing
-            video games online, or spending time with friends
+            video games online, or spending time with friends.
           </p>
         </section>
 
@@ -219,7 +219,7 @@
             <li class="mb-12">
               <div class="card group/card">
                 <div class="card-overlay"></div>
-                <header class="card-header">Jan 2022 — Present</header>
+                <header class="card-header">Jan 2022 - Present</header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
                     <a
@@ -250,7 +250,7 @@
             <li class="mb-12">
               <div class="card group/card">
                 <div class="card-overlay"></div>
-                <header class="card-header">Jul 2021 — Jan 2022</header>
+                <header class="card-header">Jul 2021 - Jan 2022</header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
                     <a
@@ -267,13 +267,7 @@
                     of systems such as content management systems, and worked
                     with external organizations as a React developer.
                   </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5">
-                    <li class="tag">React</li>
-                    <li class="tag">React Native</li>
-                    <li class="tag">TypeScript</li>
-                    <li class="tag">GraphQL</li>
-                    <li class="tag">Tailwindcss</li>
-                  </ul>
+
                   <ul class="mt-4 flex flex-wrap gap-4">
                     <li>
                       <a
@@ -312,6 +306,14 @@
                       </a>
                     </li>
                   </ul>
+
+                  <ul class="mt-4 flex flex-wrap gap-1.5">
+                    <li class="tag">React</li>
+                    <li class="tag">React Native</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">GraphQL</li>
+                    <li class="tag">Tailwindcss</li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -319,7 +321,7 @@
             <li class="mb-12">
               <div class="card group/card">
                 <div class="card-overlay"></div>
-                <header class="card-header">Mar 2020 — Jul 2021</header>
+                <header class="card-header">Mar 2020 - Jul 2021</header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
                     <a
@@ -415,6 +417,118 @@
             </li>
           </ol>
         </section>
+
+        <!--  fix highlighting nav link issue
+              min-height = 100vh - (footer-height 60px + main-margin-bottom 96px + 2*section-margin-bottom 144px + intersectionObserver-rootMargin 96px + additional 2px) -->
+        <section id="education" class="lg:min-h-[calc(100vh_-_538px)]">
+          <h2 class="section-title">Education</h2>
+
+          <ol class="group/list">
+            <li class="mb-12">
+              <div class="card group/card">
+                <div class="card-overlay"></div>
+                <header class="card-header">Jan 2016 - Jan 2020</header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-slate-200">
+                    <a
+                      href="https://www.pdn.ac.lk/"
+                      target="_blank"
+                      class="card-title"
+                      >University of Peradeniya</a
+                    >
+                    <div class="text-slate-500">B.Sc Applied Science</div>
+                  </h3>
+                  <p class="mt-2 text-sm leading-normal">
+                    Studied a four-year B.Sc in Applied Science at the Faculty
+                    of Science in the University.
+                  </p>
+                  <ul class="mt-4 flex flex-wrap gap-1.5">
+                    <li class="tag">Computer Science</li>
+                    <li class="tag">Mathematics</li>
+                    <li class="tag">Physics</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="mb-12">
+              <div class="card group/card">
+                <div class="card-overlay"></div>
+                <header class="card-header">Jan 2000 - Jan 2013</header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-slate-200">
+                    <span class="card-title"
+                      >B/Sri Devananda Central Collage - Mirahawatta</span
+                    >
+                    <div class="text-slate-500">Physical Science (Maths)</div>
+                  </h3>
+                  <p class="mt-2 text-sm leading-normal">
+                    Completed primary education as well as Ordinary Level and
+                    Advanced Level education
+                  </p>
+                  <ul class="mt-4 flex flex-wrap gap-1.5">
+                    <li class="tag">Mathematics</li>
+                    <li class="tag">Physics</li>
+                    <li class="tag">Chemistry</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+          <p>
+            Loosely designed in
+            <a
+              href="https://www.figma.com/"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >Figma</a
+            >
+            and coded in
+            <a
+              href="https://code.visualstudio.com/"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >Visual Studio Code</a
+            >
+            by yours truly. Built with
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >HTML</a
+            >
+            ,
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >JavaScript</a
+            >
+            and
+            <a
+              href="https://tailwindcss.com/"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >Tailwind CSS</a
+            >, deployed with
+            <a
+              href="https://pages.github.com/"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >GitHub Pages</a
+            >. All text is set in the
+            <a
+              href="https://www.cdnfonts.com/tr/sofia-pro.font"
+              class="font-medium text-slate-400 hover:text-teal-300"
+              target="_blank"
+              >Sofia Pro</a
+            >
+            typeface.
+          </p>
+        </footer>
       </main>
     </div>
   </body>

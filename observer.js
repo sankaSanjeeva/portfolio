@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: "about", is: true },
     { id: "experience", is: false },
     { id: "projects", is: false },
+    { id: "education", is: false },
   ];
 
   const observer = new IntersectionObserver(
